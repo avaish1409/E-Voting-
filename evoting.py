@@ -13,6 +13,8 @@ r.title("E-Voting System")
 r.geometry("900x600")
 pic1=PhotoImage(file="login.png")
 p2=vp2=dp2=sp=pm=0
+
+#validate a voter to vote only once
 def check():
 	rolls=list()
 	l=fl.readlines()
@@ -85,7 +87,7 @@ def vote():
 		for i in pl:
 			fun(i[0],i[1],i[2])
 
-
+#get the gui up and running
 	lbl1=Label(f1,text="President :")
 	lbl1.grid(row=0,column=0)
 	r11=Radiobutton(f1,text="Pranab Mukharji",variable=p,value=1)
@@ -143,6 +145,7 @@ Tops.pack(side=TOP)
 f1=Frame(r,width=800,height=700,relief=SUNKEN)
 f1.pack(side=LEFT)
 
+#first pop-up window for voter
 lb0=Label(Tops,font=('arial',50,'bold'),text="E-Voting System",fg="Black")
 lb0.grid(row=0,column=0)
 lbi=Label(f1,image=pic1)
